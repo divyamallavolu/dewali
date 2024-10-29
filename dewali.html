@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <h1>HAPPY DIWALI</h1>
+
+<p>Diwali: Festival of Lights
+
+In the heart of autumn, the nights grow bright,  
+Diwali arrives, a joyous sight.  
+Homes adorned with lanterns aglow,  
+A festival of love, where kindness flows.  
+
+Families gather, laughter fills the air,  
+Sweets are shared with heartfelt care.  
+Rangoli patterns, vibrant and grand,  
+Each design crafted by a loving hand.  
+
+The essence of giving, of love and peace,  
+A promise of hope that will never cease.  
+As the night fades, and dawn draws near,  
+We hold close the memories, year after year.  
+
+So let’s light the lamps, let our spirits soar,  
+Embrace each moment, and cherish the lore.  
+For in every heart, Diwali will shine,  
+A festival of lights...</p>
+<marquee>
+<img src="https://media.tenor.com/B2BhSpJGI7QAAAAM/happy-diwali-chutki.gif"alt="">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy5PCACgV80e5DHaex1ton1dS7_kYWgwoM0w&s"alt="">
+</marquee>
+</body>
+    <script>
+         function launchConfetti() {     
+         const duration = 7 * 1000; // 10 seconds
+         const end = Date.now() + duration;
+         const colors = ['#ffeb3b', '#8F00FF', '#ff5722', '#4caf50', '#FFFFFF',"#000000"];
+        (function frame() {
+         confetti({
+          particleCount: 6, // Reduced number of particles
+          startVelocity: 80,
+          spread: 450,
+          ticks: 190,
+          origin: { x: 0.5, y: 0.5 }, // Start from top center
+          colors: colors,
+      });
+      if (Date.now() < end) {
+          requestAnimationFrame(frame);
+      }
+  }());
+}
+window.onload = function() {
+  launchConfetti();
+}
+</script>
+</script>
+</html>
